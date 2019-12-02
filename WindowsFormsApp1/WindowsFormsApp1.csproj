@@ -63,6 +63,8 @@
     <Compile Include="Shape.cs" />
     <Compile Include="ShapeFactory.cs" />
     <Compile Include="ShapeFactoryDefination.cs" />
+    <Compile Include="VariableDefination.cs" />
+    <Compile Include="Variables.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
