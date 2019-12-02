@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="AbstractFactory.cs" />
     <Compile Include="Circle.cs" />
+    <Compile Include="ConditionController.cs" />
     <Compile Include="FactoryProducer.cs" />
     <Compile Include="FactoryProducerDefination.cs" />
     <Compile Include="Form1.cs">
