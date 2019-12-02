@@ -41,11 +41,11 @@
             this.newFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.insturctionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helloEveryoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,7 @@
             this.Clear.TabIndex = 1;
             this.Clear.Text = "CLEAR";
             this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // Reset
             // 
@@ -92,6 +93,7 @@
             // 
             // MultipleLines
             // 
+            this.MultipleLines.BackColor = System.Drawing.SystemColors.HighlightText;
             this.MultipleLines.Location = new System.Drawing.Point(12, 53);
             this.MultipleLines.Multiline = true;
             this.MultipleLines.Name = "MultipleLines";
@@ -100,10 +102,12 @@
             // 
             // Panel
             // 
+            this.Panel.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.Panel.Location = new System.Drawing.Point(398, 53);
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(644, 351);
             this.Panel.TabIndex = 5;
+            this.Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_Paint);
             // 
             // Singleline
             // 
@@ -120,6 +124,7 @@
             this.MRun.TabIndex = 6;
             this.MRun.Text = "RUN";
             this.MRun.UseVisualStyleBackColor = true;
+            this.MRun.Click += new System.EventHandler(this.MRun_Click);
             // 
             // menuStrip1
             // 
@@ -165,6 +170,13 @@
             this.saveFileToolStripMenuItem.Text = "Save File";
             this.saveFileToolStripMenuItem.Click += new System.EventHandler(this.saveFileToolStripMenuItem_Click);
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -194,13 +206,6 @@
             this.helloEveryoneToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
             this.helloEveryoneToolStripMenuItem.Text = "Hello Everyone...!!!";
             // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -218,6 +223,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
