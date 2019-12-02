@@ -451,7 +451,7 @@ namespace WindowsFormsApp1
                 Pen blackPen = new Pen(Color.BlueViolet, 3);
                 PointF point1 = new PointF(300.0F, 50.0F);
                 PointF point2 = new PointF(400.0F, 25.0F);
-                PointF point3 = new PointF(200.0F, 8.0F);
+                PointF point3 = new PointF(201.0F, 8.0F);
                 
                 string[] str = new string[3];
                 PointF[] curvePoints =
