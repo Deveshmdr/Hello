@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,7 +50,7 @@ namespace WindowsFormsApp1
                     {
                         using (myStream) //dispose is done automatically
                         {
-                            multipleLine.Text = File.ReadAllText(openFileDialog1.FileName);//loading text file in multiple Line
+                            MultipleLines.Text = File.ReadAllText(openFileDialog1.FileName);//loading text file in multiple Line
                         }
                     }
                 }
