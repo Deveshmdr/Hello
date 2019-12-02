@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
 
         private void insturctionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Select All");
         }
 
         private void loadFileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -59,6 +59,35 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }
+        }
+
+        private async void saveFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();//creating a instance of a dialog box
+            sfd.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"; //creting text form
+            sfd.RestoreDirectory = true;
+
+            if (sfd.ShowDialog() == DialogResult.OK)//if choose data is fine then enter todialog box
+            {
+                try
+                {
+
+                    using (StreamWriter write = new StreamWriter(sfd.FileName)) //dispose is done automatically
+                    {
+                        await write.WriteLineAsync(MultipleLines.Text);//loading text file in multipleLine
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
+            }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
