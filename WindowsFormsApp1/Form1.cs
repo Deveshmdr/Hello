@@ -30,7 +30,15 @@ namespace WindowsFormsApp1
 
         private void insturctionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Select All");
+            MessageBox.Show("For drawing without parameter:\n" +
+                            "\n draw circle 100 \n draw rectangle 100 100 \n \n" +
+                            "For drawing with parameter: \n r = 100 \n draw circle r \n h = 100 \n w = 100 \n draw rectangle h w \n \n" +
+                            "For moving cursor: \n moveto 100 100 \n \n" +
+                            "For drawing line: \n drawto 100 100\n \n" +
+                            "For choosing color: \n color = red \n \n" +
+                            "For declaring variable: \n counter = 100 \n \n" +
+                            "For looping: \n r = 100 \n loop 4 \n r + 100 \n draw circle r \n end loop \n \n " +
+                            "For if statement: \n counter = 5 \n if counter = 5 then \n draw circle 100 \n end if \n \n");
         }
 
         private void loadFileToolStripMenuItem_Click(object sender, EventArgs e)
