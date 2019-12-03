@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
+    /// <summary>
+    /// <Variables>
+    /// </summary>
     public class Variables
     {
         /// <summary>
         /// settter and getter
         /// </summary>
         public string variable { get; set; }
+
+        /// <summary>
+        /// float value
+        /// </summary>
         public float value { get; set; }
 
 

@@ -7,6 +7,10 @@ using System.Drawing;
 
 namespace WindowsFormsApp1
 {
+    /// <summary>
+    /// abstract class
+    /// base class for all shapes
+    /// </summary>
     public abstract class Shape
     {
         //variable declaration and initialization

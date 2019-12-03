@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    class MoveDirection
+    /// <summary>
+    /// contructor
+    /// </summary>
+    public class MoveDirection
     {
         /// <summary>
         /// move default constructor

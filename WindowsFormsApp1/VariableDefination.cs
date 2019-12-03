@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
+    /// <summary>
+    /// Defination Variable
+    /// </summary>
     public class VariableDefination
     {
         /// <summary>

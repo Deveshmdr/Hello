@@ -7,6 +7,10 @@ using System.Drawing;
 
 namespace WindowsFormsApp1
 {
+
+    /// <summary>
+    /// for rectangles
+    /// </summary>
     public class Rectangle : Shape
     {
         //declaration of variables

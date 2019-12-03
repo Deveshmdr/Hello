@@ -7,6 +7,9 @@ using System.Drawing;
 
 namespace WindowsFormsApp1
 {
+    /// <summary>
+    /// circle parameters
+    /// </summary>
     public class Circle : Shape
     {
         int radius;//declaration of the radius

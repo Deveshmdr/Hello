@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
+    /// <summary>
+    /// factory for shape
+    /// </summary>
     public class FactoryProducerDefination
     {
         /// <summary>

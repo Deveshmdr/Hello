@@ -36,7 +36,11 @@ namespace WindowsFormsApp1
             }
             return false;
         }
-
+        /// <summary>
+        /// method to check triangle shape
+        /// </summary>
+        /// <param name="shape"></param>
+        /// <returns></returns>
         public bool isTriangle(string shape)
         {
             if (shape == "Triangle")
