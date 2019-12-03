@@ -1,10 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using WindowsFormsApp1;
 
-namespace UnitTestProject
+namespace UnitTestP
 {
     [TestClass]
-    public class FactoryDefinitionTest
+    public class FactoryDefinationTest
     {
         [TestMethod]
         public void isShape()

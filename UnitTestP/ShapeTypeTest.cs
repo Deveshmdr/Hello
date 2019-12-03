@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using WindowsFormsApp1;
 
-namespace UnitTestProject
+namespace UnitTestP
 {
     [TestClass]
     public class ShapeTypeTest
     {
         [TestMethod]
-        public void isCircle_stringCircle_returnTrue()
+        public void IsCircle_stringCircle_returnTrue()
         {
             //arrange
             bool result;
@@ -22,7 +20,6 @@ namespace UnitTestProject
             //assert
             Assert.IsTrue(result);
         }
-
         public void isRectangle_stringRectangle_returnTrue()
         {
             //arrange

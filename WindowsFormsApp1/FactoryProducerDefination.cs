@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    class FactoryProducerDefination
+    public class FactoryProducerDefination
     {
         /// <summary>
         /// checks whether the type is shape or color

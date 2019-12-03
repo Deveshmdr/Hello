@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6F338E64-C3B2-4625-9938-4EFED85E186E}</ProjectGuid>
+    <ProjectGuid>{2772FA6B-EB6F-4E25-840F-11FCC1E2DA3D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnitTestProject</RootNamespace>
-    <AssemblyName>UnitTestProject</AssemblyName>
+    <RootNamespace>UnitTestP</RootNamespace>
+    <AssemblyName>UnitTestP</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,12 +49,19 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FactoryProducerDefination.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="FactoryDefinationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShapeTypeTest.cs" />
+    <Compile Include="VariableDefinationTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WindowsFormsApp1\WindowsFormsApp1.csproj">
+      <Project>{378e0cbb-3faf-4bb4-a1aa-78a04de60b02}</Project>
+      <Name>WindowsFormsApp1</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
