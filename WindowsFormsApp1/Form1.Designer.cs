@@ -99,6 +99,7 @@
             this.MultipleLines.Name = "MultipleLines";
             this.MultipleLines.Size = new System.Drawing.Size(380, 160);
             this.MultipleLines.TabIndex = 4;
+            this.MultipleLines.Text = "Multiple line command";
             // 
             // Panel
             // 
@@ -135,7 +136,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1054, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1054, 30);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -222,7 +223,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Advance Software Engineering";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
