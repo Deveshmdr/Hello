@@ -69,21 +69,6 @@ namespace WindowsFormsApp1
             moveX = 0;
             moveY = 0;
 
-            
-            /*
-            StreamReader s = File.OpenText("D:\\TBC\\Semester 7 & 8\\ASE\\Workspace\\SoftwareAssignment\\WindowsFormsApp1\\move.txt");
-            
-    
-            do
-            {
-                string line = s.ReadLine();
-                if (line == null) break;
-                MultipleLines.Text += line;
-
-            }
-            while (true);
-            MRun_Click(sender, e);
-            this.MultipleLines.Clear();*/
         }
 
         private void MRun_Click(object sender, EventArgs e)
@@ -482,7 +467,7 @@ namespace WindowsFormsApp1
             Panel.Invalidate();
             circleObjects.Clear();
             rectangleObjects.Clear();
-            variableObjects.Clear();
+            /*variableObjects.Clear();*/
             polygonObjects.Clear();
             lineObjects.Clear();
             this.CreateCircle = false;
