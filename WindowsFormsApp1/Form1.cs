@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
         int moveX, moveY; //cursor moving direction points
         int counter; // counter to loop code
         int thickness; //thickness of pen
-        int? loopCounter = null; //loopcounter to hold loop value in loop code
+        int loopCounter; //loopcounter to hold loop value in loop code
 
         public Form1()
         {
@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
             shape1 = shapeFactory.getShape("Circle");
             shape2 = shapeFactory.getShape("Rectangle");
         }
-
+        
         private void button3_Click(object sender, EventArgs e)
         {
             circleObjects.Clear();
@@ -69,6 +69,7 @@ namespace WindowsFormsApp1
             moveX = 0;
             moveY = 0;
             Console.Clear();
+
         }
 
         private void MRun_Click(object sender, EventArgs e)
@@ -380,7 +381,11 @@ namespace WindowsFormsApp1
                             i = Array.IndexOf(parts, "end loop");
                             
                         }
+
                     }
+                    
+
+
                 }
 
             }
@@ -821,7 +826,8 @@ namespace WindowsFormsApp1
                             "For choosing color: \n color (red,green,blue,yellow) 2 \n \n" +
                             "For declaring variable: \n counter = 100 \n \n" +
                             "For looping: \n r = 100 \n loop 4 \n r + 100 \n draw circle r \n end loop \n \n " +
-                            "For if statement: \n counter = 5 \n if counter = 5 then \n draw circle 100 \n end if \n \n");
+                            "For if statement: \n counter = 5 \n if counter = 5 then \n draw circle 100 \n end if \n \n To see value : " +
+                            "\n show v");
         }
 
         private void loadFileToolStripMenuItem_Click(object sender, EventArgs e)
