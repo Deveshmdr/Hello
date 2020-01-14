@@ -99,7 +99,6 @@
             this.MultipleLines.Name = "MultipleLines";
             this.MultipleLines.Size = new System.Drawing.Size(380, 160);
             this.MultipleLines.TabIndex = 4;
-            this.MultipleLines.Text = "Multiple line command";
             // 
             // Panel
             // 

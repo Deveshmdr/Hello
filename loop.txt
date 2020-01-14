@@ -1,0 +1,5 @@
+r = 100
+loop 4
+r + 50
+draw circle r
+end loop

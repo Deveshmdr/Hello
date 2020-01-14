@@ -66,7 +66,14 @@ namespace WindowsFormsApp1
             this.Singleline.Clear();
             this.drawtriangle = false;
             Panel.Refresh();
+            moveX = 0;
+            moveY = 0;
+
+            
+            /*
             StreamReader s = File.OpenText("D:\\TBC\\Semester 7 & 8\\ASE\\Workspace\\SoftwareAssignment\\WindowsFormsApp1\\move.txt");
+            
+    
             do
             {
                 string line = s.ReadLine();
@@ -76,7 +83,7 @@ namespace WindowsFormsApp1
             }
             while (true);
             MRun_Click(sender, e);
-            this.MultipleLines.Clear();
+            this.MultipleLines.Clear();*/
         }
 
         private void MRun_Click(object sender, EventArgs e)
@@ -431,7 +438,7 @@ namespace WindowsFormsApp1
 
             if (MoveCursor == true) //condition to move pointer
             {
-                console_text += Environment.NewLine + " moving\n\n";
+                console_text += Environment.NewLine + "\n\n";
                 point = new Point();
                 point.X = moveX;
                 point.Y = moveY;
@@ -828,7 +835,7 @@ namespace WindowsFormsApp1
         {
             Stream myStream = null;//instantiating null value for stra
             OpenFileDialog openFileDialog1 = new OpenFileDialog();//creating a instance of a dialog box
-            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.InitialDirectory = "D:\\TBC\\Semester 7 & 8\\ASE\\Workspace\\SoftwareAssignment\\WindowsFormsApp1";
             openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"; //creting text form
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
