@@ -314,21 +314,21 @@ namespace WindowsFormsApp1
                         console_text += Environment.NewLine + "X=" + moveX + Environment.NewLine  + "Y=" + moveY + "\n\n";
                     }
 
-                    if (words[0] == "color")
+                    if (words[0] == "color" || words[0] == "Color")
                     {
                         thickness = Convert.ToInt32(words[2]);
 
-                        if (words[1] == "red")
+                        if (words[1] == "red" || words[1] == "Red")
                         {
                             c = Color.Red;
                             console_text += Environment.NewLine + "Pen is of red color\n\n";
                         }
-                        else if (words[1] == "blue")
+                        else if (words[1] == "blue" || words[1] == "Blue")
                         {
                             c = Color.Blue;
                             console_text += Environment.NewLine + "Pen is of blue color\n\n";
                         }
-                        else if (words[1] == "yellow")
+                        else if (words[1] == "yellow" || words[1] == "yellow")
                         {
                             c = Color.Yellow;
                             console_text += Environment.NewLine + "Pen is of yellow color\n\n";
