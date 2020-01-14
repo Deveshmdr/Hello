@@ -68,6 +68,10 @@ namespace WindowsFormsApp1
             Panel.Refresh();
             moveX = 0;
             moveY = 0;
+            Console.Clear();
+            
+            
+
 
         }
 
@@ -277,7 +281,7 @@ namespace WindowsFormsApp1
                     {
                         if (!(words.Length == 3)) //checks if written code is correct or not
                         {
-                            MessageBox.Show("!!Please enter correct command!!");
+                            MessageBox.Show("Please enter correct command !!");
                             console_text += Environment.NewLine + "Correct code be like: \n e.g. drawTo 100 100 \n\n";
                         }
                         else
@@ -353,6 +357,8 @@ namespace WindowsFormsApp1
                         else
                         {//directed to end if line
                             i = Array.IndexOf(parts, "end if");
+                            MessageBox.Show("Variable Doesn't match ! \n" + "Please check or re-assign counter " );
+
                         }
 
                     }
@@ -376,6 +382,7 @@ namespace WindowsFormsApp1
                         else // keep drawing
                         {
                             i = Array.IndexOf(parts, "end loop");
+                            
                         }
                     }
                 }
@@ -474,6 +481,8 @@ namespace WindowsFormsApp1
             this.DrawRectangle = false;
             this.MoveCursor = false;
             this.drawtriangle = false;
+            
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -591,6 +600,7 @@ namespace WindowsFormsApp1
                                 MessageBox.Show("!!Please enter correct command!!");
                                 console_text += Environment.NewLine + "\n Correct code be like: \n e.g. draw circle 100 or draw circle r \n\n";
                             }
+
                             else
                             {
                                 if (variableObjects.Exists(x => x.variable == words[2]) == true)
@@ -616,7 +626,9 @@ namespace WindowsFormsApp1
                                     CreateCircle = true;
                                     console_text += Environment.NewLine + "\n Adding new circle\n\n";
                                 }
+                                
                             }
+                            
                         }
 
 
@@ -784,17 +796,18 @@ namespace WindowsFormsApp1
                         }
                     }
                 }
-
+                
             }
+            
             catch (IndexOutOfRangeException ex)
             {
                 console_text += Environment.NewLine + "\n Error: " + ex.Message + "\n\n";
             }
-            catch (FormatException ex)
+            catch (FormatException )
             {
                 console_text += Environment.NewLine + "\n !!Please input correct parameter!!\n\n";
             }
-            catch (ArgumentOutOfRangeException ex)
+            catch (ArgumentOutOfRangeException )
             {
                 console_text += Environment.NewLine + "\n !!Please input correct parameter!!\n\n";
 
