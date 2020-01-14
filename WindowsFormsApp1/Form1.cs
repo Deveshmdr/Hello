@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
         int moveX, moveY; //cursor moving direction points
         int counter; // counter to loop code
         int thickness; //thickness of pen
-        int loopCounter; //loopcounter to hold loop value in loop code
+        int? loopCounter = null; //loopcounter to hold loop value in loop code
 
         public Form1()
         {
@@ -69,10 +69,6 @@ namespace WindowsFormsApp1
             moveX = 0;
             moveY = 0;
             Console.Clear();
-            
-            
-
-
         }
 
         private void MRun_Click(object sender, EventArgs e)
@@ -168,21 +164,21 @@ namespace WindowsFormsApp1
                     }
 
                     //shows variableObjects lists
-                    if (words[0] == "Show")
+                    if (words[0].ToUpper() == "SHOW")
                     {
                         foreach (Variables v in variableObjects)
                         {
-                            MessageBox.Show("Full variable: " + v.getVariable());
-                            MessageBox.Show("Full value: " + Convert.ToString(v.getValue()));
+                            MessageBox.Show("Full variable : " + v.getVariable() + "\n"
+                                + "Full value: " + Convert.ToString(v.getValue()));
                         }
                     }
 
                     //condition to check if "draw" then
-                    if (words[0].Contains("Draw") == true || words[0].Contains("draw") == true)
+                    if (words[0].ToUpper() == "DRAW")
                     {
                         counter += 1;//value to increment draw circle method
 
-                        if (words[1].Contains("Circle") == true || words[1].Contains("circle") == true)
+                        if (words[1].ToUpper() == "CIRCLE")
                         // condition to check if "circle" then
                         {
                             if (!(words.Length == 3)) //checks if written code is correct or not
@@ -222,7 +218,7 @@ namespace WindowsFormsApp1
 
 
 
-                        if (words[1].Contains("Rectangle") == true || words[1].Contains("rectangle") == true)
+                        if (words[1].ToUpper() == "RECTANGLE")
                         {
                             //MessageBox.Show(moveX.ToString());
                             if (!(words.Length == 4)) //extending parameter values
@@ -268,7 +264,7 @@ namespace WindowsFormsApp1
 
 
 
-                        if (words[1].Contains("Polygon") == true || words[1].Contains("triangle") == true || words[1].Contains("Triangle")==true || words[1].Contains("polygon") == true)
+                        if (words[1].ToUpper() == "TRIANGLE" || words[1].ToUpper() == "POLYGON")
 
                         {
 
@@ -277,7 +273,7 @@ namespace WindowsFormsApp1
                         }
                     }
 
-                    if (words[0].Contains("DrawTo") == true || words[0].Contains("drawto") == true)
+                    if (words[0].ToUpper() == "DRAWTO")
                     {
                         if (!(words.Length == 3)) //checks if written code is correct or not
                         {
@@ -306,7 +302,7 @@ namespace WindowsFormsApp1
                         }
                     }
 
-                    if (words[0].Contains("MoveTo") == true || words[0].Contains("moveto") == true) // condition to check if "move" then
+                    if (words[0].ToUpper() == "MOVETO") // condition to check if "move" then
                     {
                         moveX = Convert.ToInt32(words[1]);
                         moveY = Convert.ToInt32(words[2]);
@@ -314,21 +310,21 @@ namespace WindowsFormsApp1
                         console_text += Environment.NewLine + "X=" + moveX + Environment.NewLine  + "Y=" + moveY + "\n\n";
                     }
 
-                    if (words[0] == "color" || words[0] == "Color")
+                    if (words[0].ToUpper() == "COLOR")
                     {
                         thickness = Convert.ToInt32(words[2]);
 
-                        if (words[1] == "red" || words[1] == "Red")
+                        if (words[1].ToUpper() == "RED")
                         {
                             c = Color.Red;
                             console_text += Environment.NewLine + "Pen is of red color\n\n";
                         }
-                        else if (words[1] == "blue" || words[1] == "Blue")
+                        else if (words[1].ToUpper() == "BLUE")
                         {
                             c = Color.Blue;
                             console_text += Environment.NewLine + "Pen is of blue color\n\n";
                         }
-                        else if (words[1] == "yellow" || words[1] == "yellow")
+                        else if (words[1].ToUpper() == "YELLOW")
                         {
                             c = Color.Yellow;
                             console_text += Environment.NewLine + "Pen is of yellow color\n\n";
@@ -343,7 +339,7 @@ namespace WindowsFormsApp1
 
 
 
-                    if (words[0] == "if") //code for if statement
+                    if (words[0].ToUpper() == "IF") //code for if statement
                     {
                         string variable_name = words[1];
                         int value = Convert.ToInt32(words[3]);
@@ -365,7 +361,7 @@ namespace WindowsFormsApp1
 
 
 
-                    if (words[0] == "loop") //code for loop statement
+                    if (words[0].ToUpper() == "LOOP") //code for loop statement
                     {
                         loopCounter = Convert.ToInt32(words[1]); //defines loop counter variable
                         console_text += Environment.NewLine + "Entered into loop statement\n\n";
@@ -373,7 +369,7 @@ namespace WindowsFormsApp1
 
 
 
-                    if (parts[i] == "end loop") // code for end loop statement
+                    if (parts[i].ToUpper() == "END LOOP") // code for end loop statement
                     {
                         if (counter < loopCounter) //if counter to draw is not less than loop counter
                         {
@@ -578,21 +574,21 @@ namespace WindowsFormsApp1
                     }
 
                     //shows variableObjects lists
-                    if (words[0] == "Show")
+                    if (words[0].ToUpper() == "SHOW")
                     {
                         foreach (Variables v in variableObjects)
                         {
-                            MessageBox.Show("Full variable: " + v.getVariable());
-                            MessageBox.Show("Full value: " + Convert.ToString(v.getValue()));
+                            MessageBox.Show("Full variable : " + v.getVariable() + "\n" 
+                                + "Full value: " + Convert.ToString(v.getValue()));
                         }
                     }
 
                     //condition to check if "draw" then
-                    if (words[0].Contains("Draw") == true || words[0].Contains("draw") == true)
+                    if (words[0].ToUpper() == "DRAW")
                     {
                         counter += 1;//value to increment draw circle method
 
-                        if (words[1].Contains("Circle") == true || words[1].Contains("circle") == true)
+                        if (words[1].ToUpper() == "CIRCLE")
                         // condition to check if "circle" then
                         {
                             if (!(words.Length == 3)) //checks if written code is correct or not
@@ -634,12 +630,12 @@ namespace WindowsFormsApp1
 
 
 
-                        if (words[1].Contains("Rectangle") == true || words[1].Contains("rectangle") == true)
+                        if (words[1].ToUpper() == "RECTANGLE")
                         {
                             //MessageBox.Show(moveX.ToString());
                             if (!(words.Length == 4)) //extending parameter values
                             {
-                                MessageBox.Show("!!Please enter correct command!!");
+                                MessageBox.Show("Please enter correct command!!");
                                 console_text += Environment.NewLine + "\n Correct code be like: \n e.g. draw rectangle 100 100 or draw circle h w \n\n";
                             }
                             else
@@ -680,7 +676,7 @@ namespace WindowsFormsApp1
 
 
 
-                        if (words[1].Contains("Polygon") == true || words[1].Contains("triangle") == true || words[1].Contains("Triangle") == true || words[1].Contains("polygon") == true)
+                        if (words[1].ToUpper() == "TRIANGLE")
                         {
 
                             drawtriangle = true;
@@ -689,12 +685,12 @@ namespace WindowsFormsApp1
                        
                     }
 
-                    if (words[0].Contains("DrawTo") == true || words[0].Contains("drawto") == true)
+                    if (words[0].ToUpper() == "DRAWTO")
                     {
                         if (!(words.Length == 3)) //checks if written code is correct or not
                         {
-                            MessageBox.Show("!!Please enter correct command!!");
-                            console_text += Environment.NewLine + "\n Correct code be like: \n e.g. drawTo 100 100 \n\n";
+                            MessageBox.Show("Please enter correct command!!");
+                            console_text += Environment.NewLine + "Correct code be like: \n e.g. drawTo 100 100 \n\n";
                         }
                         else
                         {
@@ -718,7 +714,7 @@ namespace WindowsFormsApp1
                         }
                     }
 
-                    if (words[0].Contains("MoveTo") == true || words[0].Contains("moveto") == true) // condition to check if "move" then
+                    if (words[0].ToUpper() == "MOVETO") // condition to check if "move" then
                     {
                         moveX = Convert.ToInt32(words[1]);
                         moveY = Convert.ToInt32(words[2]);
@@ -726,21 +722,21 @@ namespace WindowsFormsApp1
                         console_text += Environment.NewLine + "X=" + moveX + "\n" + "Y=" + moveY + "\n\n";
                     }
 
-                    if (words[1] == "color")
+                    if (words[1].ToUpper() == "COLOR")
                     {
                         thickness = Convert.ToInt32(words[2]);
 
-                        if (words[1] == "red")
+                        if (words[1].ToUpper() == "RED")
                         {
                             c = Color.Red;
                             console_text += Environment.NewLine + " \n Pen is of red color\n\n";
                         }
-                        else if (words[1] == "blue")
+                        else if (words[1].ToUpper() == "BLUE")
                         {
                             c = Color.Blue;
                             console_text += Environment.NewLine + "\n Pen is of blue color\n\n";
                         }
-                        else if (words[1] == "yellow")
+                        else if (words[1].ToUpper() == "YELLOW")
                         {
                             c = Color.Yellow;
                             console_text += Environment.NewLine + "\n Pen is of yellow color\n\n";
@@ -755,7 +751,7 @@ namespace WindowsFormsApp1
 
 
 
-                    if (words[0] == "if") //code for if statement
+                    if (words[0].ToUpper() == "IF") //code for if statement
                     {
                         string variable_name = words[1];
                         int value = Convert.ToInt32(words[3]);
@@ -775,7 +771,7 @@ namespace WindowsFormsApp1
 
 
 
-                    if (words[0] == "loop") //code for loop statement
+                    if (words[0].ToUpper() == "LOOP") //code for loop statement
                     {
                         loopCounter = Convert.ToInt32(words[1]); //defines loop counter variable
                         console_text += Environment.NewLine + "\n Entered into loop statement\n\n";
@@ -783,7 +779,7 @@ namespace WindowsFormsApp1
 
 
 
-                    if (parts[i] == "end loop") // code for end loop statement
+                    if (parts[i].ToUpper() == "END LOOP") // code for end loop statement
                     {
                         if (counter < loopCounter) //if counter to draw is not less than loop counter
                         {
@@ -822,7 +818,7 @@ namespace WindowsFormsApp1
                             "For drawing with parameter: \n r = 100 \n draw circle r \n h = 100 \n w = 100 \n draw rectangle h w \n \n" +
                             "For moving cursor: \n moveto 100 100 \n \n" +
                             "For drawing line: \n drawto 100 100\n \n" +
-                            "For choosing color: \n color = red \n \n" +
+                            "For choosing color: \n color (red,green,blue,yellow) 2 \n \n" +
                             "For declaring variable: \n counter = 100 \n \n" +
                             "For looping: \n r = 100 \n loop 4 \n r + 100 \n draw circle r \n end loop \n \n " +
                             "For if statement: \n counter = 5 \n if counter = 5 then \n draw circle 100 \n end if \n \n");
