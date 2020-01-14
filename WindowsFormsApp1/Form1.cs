@@ -105,7 +105,7 @@ namespace WindowsFormsApp1
                     //single code line
                     String code_line = parts[i];
 
-                    char[] code_delimiters = new char[] { ' ' };
+                    char[] code_delimiters = new char[] { ' ',',' };
                     words = code_line.Split(code_delimiters, StringSplitOptions.RemoveEmptyEntries); //holds invididuals code line
 
                     //calculation to add value to variable
@@ -515,7 +515,7 @@ namespace WindowsFormsApp1
                     //single code line
                     String code_line = parts[i];
 
-                    char[] code_delimiters = new char[] { ' ' };
+                    char[] code_delimiters = new char[] { ' ',',' };
                     words = code_line.Split(code_delimiters, StringSplitOptions.RemoveEmptyEntries); //holds invididuals code line
 
                     //calculation to add value to variable
@@ -630,8 +630,7 @@ namespace WindowsFormsApp1
                             }
                             
                         }
-
-
+                        
 
 
 
